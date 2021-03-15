@@ -10,8 +10,8 @@ class MoodoApp extends StatefulWidget {
 }
 
 class _MoodoAppState extends State<MoodoApp> {
-  final String bgPagi = "assets/bgPagi.png";
-  final String bgMalam = "assets/bgMalam.png";
+  final String bgPagi = "images/bgPagi.png";
+  final String bgMalam = "images/bgMalam.png";
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +24,8 @@ class _MoodoAppState extends State<MoodoApp> {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                  image:
-                      DecorationImage(image: AssetImage("assets/bgPagi.png"))),
+                  image: DecorationImage(
+                      image: AssetImage(bgPagi), fit: BoxFit.cover)),
             )
           ],
         ),
