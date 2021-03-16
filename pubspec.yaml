@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   curved_navigation_bar: ^0.3.7
+  sized_context: ^0.2.1+1
 
 
 dev_dependencies:
@@ -50,6 +51,9 @@ flutter:
   assets:
     - images/bgPagi.png
     - images/bgMalam.png
+    - images/baik.gif
+    - images/netral.gif
+    - images/buruk.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

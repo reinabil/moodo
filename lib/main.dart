@@ -16,19 +16,34 @@ class _MoodoAppState extends State<MoodoApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          bottomNavigationBar: CurvedNavigationBar(
-            backgroundColor: Colors.blueGrey,
-            items: <Widget>[
-              Icon(Icons.add, size: 30),
-              Icon(Icons.list, size: 30),
-              Icon(Icons.compare_arrows, size: 30),
-            ],
-            onTap: (index) {
-              //Handle button tap
-            },
-          ),
-          body: HomePage()),
+      home: Scaffold(bottomNavigationBar: navbar(), body: HomePage()),
+    );
+  }
+
+  CurvedNavigationBar navbar() {
+    return CurvedNavigationBar(
+      color: Color.fromARGB(255, 14, 71, 100),
+      backgroundColor: Colors.white,
+      items: <Widget>[
+        Icon(
+          Icons.home_rounded,
+          size: 30,
+          color: Colors.grey[50],
+        ),
+        Icon(
+          Icons.list,
+          size: 30,
+          color: Colors.grey[50],
+        ),
+        Icon(
+          Icons.favorite_rounded,
+          size: 30,
+          color: Colors.grey[50],
+        ),
+      ],
+      onTap: (index) {
+        //Handle button tap
+      },
     );
   }
 }
