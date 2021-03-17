@@ -23,6 +23,7 @@ class _MoodoAppState extends State<MoodoApp> {
   final FavPage _favPage = FavPage();
 
   Widget _showPage = HomePage();
+  // ignore: missing_return
   Widget _pageChooser(int page) {
     switch (page) {
       case 0:
@@ -40,6 +41,7 @@ class _MoodoAppState extends State<MoodoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.green, primarySwatch: Colors.green),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           bottomNavigationBar: navbar(),
@@ -51,6 +53,7 @@ class _MoodoAppState extends State<MoodoApp> {
 
   CurvedNavigationBar navbar() {
     return CurvedNavigationBar(
+      animationCurve: Curves.easeInOut,
       height: 65,
       index: pageIndex,
       color: Color.fromARGB(255, 0, 118, 79),

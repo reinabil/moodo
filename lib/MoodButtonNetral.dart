@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sized_context/sized_context.dart';
 
+// ignore: must_be_immutable
 class MoodButtonNetral extends StatefulWidget {
   Color mainColor, secondColor;
   @override
@@ -48,18 +49,18 @@ class _MoodButtonNetralState extends State<MoodButtonNetral> {
   _MoodButtonNetralState(this.mainColor, this.secondColor);
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTapDown: (details) {
         setState(() {
           isPressed = !isPressed;
         });
       },
-      onTapUp: (details) {
+      onTapCancel: () {
         setState(() {
           isPressed = !isPressed;
         });
       },
-      onTapCancel: () {
+      onTap: () {
         setState(() {
           isPressed = !isPressed;
         });
@@ -91,10 +92,10 @@ class _MoodButtonNetralState extends State<MoodButtonNetral> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 8),
+            margin: EdgeInsets.only(top: 16),
             child: Text(
               "Netral",
-              style: headline,
+              style: body,
             ),
           ),
         ],

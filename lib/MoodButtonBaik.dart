@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:moodo/ListDoaBaik.dart';
 import 'package:sized_context/sized_context.dart';
 
+// ignore: must_be_immutable
 class MoodButtonBaik extends StatefulWidget {
   Color mainColor, secondColor;
   @override
@@ -48,16 +50,18 @@ class _MoodButtonBaikState extends State<MoodButtonBaik> {
   _MoodButtonBaikState(this.mainColor, this.secondColor);
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTapDown: (details) {
         setState(() {
           isPressed = !isPressed;
         });
       },
-      onTapUp: (details) {
+      onTap: () {
         setState(() {
           isPressed = !isPressed;
         });
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => ListDoaBaik()));
       },
       onTapCancel: () {
         setState(() {
@@ -91,10 +95,10 @@ class _MoodButtonBaikState extends State<MoodButtonBaik> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 8),
+            margin: EdgeInsets.only(top: 16),
             child: Text(
               "Baik",
-              style: headline,
+              style: body,
             ),
           ),
         ],
