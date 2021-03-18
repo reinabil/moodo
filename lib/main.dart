@@ -56,24 +56,24 @@ class _MoodoAppState extends State<MoodoApp> {
       animationCurve: Curves.easeInOut,
       height: 65,
       index: pageIndex,
-      color: Color.fromARGB(255, 0, 118, 79),
-      buttonBackgroundColor: Color.fromARGB(255, 239, 83, 38),
+      color: Color.fromARGB(255, 101, 219, 156),
+      buttonBackgroundColor: Color.fromARGB(255, 66, 167, 166),
       backgroundColor: Colors.white,
       items: <Widget>[
         Icon(
           Icons.home_rounded,
           size: 30,
-          color: Colors.grey[50],
+          color: Colors.white,
         ),
         Icon(
           Icons.list,
           size: 30,
-          color: Colors.grey[50],
+          color: Colors.white,
         ),
         Icon(
           Icons.favorite_rounded,
           size: 30,
-          color: Colors.grey[50],
+          color: Colors.white,
         ),
       ],
       onTap: (int tappedIndex) {

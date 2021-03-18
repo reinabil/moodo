@@ -10,8 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final String bgPagi = 'images/bgPagi.png';
-  final String bgMalam = 'images/bgMalam.png';
   final String bgBunga = 'images/bgBunga.png';
 
   final TextStyle header = TextStyle(
@@ -21,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     fontWeight: FontWeight.w700,
   );
   final TextStyle title1 = TextStyle(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 28,
     fontFamily: "Poppins",
     fontWeight: FontWeight.w700,
@@ -38,12 +36,12 @@ class _HomePageState extends State<HomePage> {
     fontSize: 20,
   );
   final TextStyle body = TextStyle(
-    color: Colors.black,
+    color: Colors.white,
     fontFamily: "Poppins",
     fontSize: 14,
   );
   final TextStyle caption = TextStyle(
-    color: Colors.black,
+    color: Colors.white,
     fontFamily: "Poppins",
     fontSize: 12,
   );
@@ -58,8 +56,12 @@ class _HomePageState extends State<HomePage> {
             Container(
                 constraints: BoxConstraints.expand(),
                 decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(bgBunga), fit: BoxFit.cover))),
+                  gradient: LinearGradient(
+                    begin: Alignment.centerRight,
+                    end: Alignment.centerLeft,
+                    colors: [Color(0xff65db9f), Color(0xff3da0a6)],
+                  ),
+                )),
             Container(
               margin: EdgeInsets.fromLTRB(40, 80, 40, 40),
               child: Column(
@@ -83,12 +85,12 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
-                        color: Color(0xffef5326),
+                        color: Color(0xffffffff),
                         width: 1,
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Color(0x54ef5325),
+                          color: Color.fromARGB(255, 66, 167, 166),
                           blurRadius: 13,
                           offset: Offset(0, 7),
                         ),
@@ -117,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                             topRight: Radius.circular(20.0)),
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(100, 42, 146, 117),
+                            color: Color.fromARGB(255, 66, 167, 166),
                             blurRadius: 6.0,
                             offset: Offset(0, -7),
                           )
@@ -146,7 +148,8 @@ class _HomePageState extends State<HomePage> {
                           height: context.widthPct(.8) / 3,
                           decoration: BoxDecoration(
                               color: Colors.white,
-                              border: Border.all(color: Color(0xffef5326)),
+                              border: Border.all(
+                                  color: Color.fromARGB(255, 66, 167, 166)),
                               borderRadius: BorderRadius.circular(16)),
                         ),
                         Container(
